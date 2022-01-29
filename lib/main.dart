@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'PIN Password',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.amber,
       ),
       home: HomePage(),
     );
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
     var widget;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
+        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,
@@ -55,14 +55,14 @@ class HomePage extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.lock, // รูปไอคอน
-                      size: 50.0, // ขนาดไอคอน
+                      size:60.0, // ขนาดไอคอน
                       color: Colors.blueGrey, // สีไอคอน
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(30.0),
+                      padding: const EdgeInsets.all(15.0),
                       child: Text("กรุณาใส่รหัสผ่าน",
                           style: TextStyle(
-                              fontSize: 18.0, color: Colors.blueGrey)),
+                              fontSize: 20.0, color: Colors.black)),
                     ),
                   ],
                 ),
@@ -96,24 +96,24 @@ class HomePage extends StatelessWidget {
                         height: 50,
                       )),
                   Padding(
-                    padding: const EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: buildButton(num: 0),
                   ),
                   Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Icon(
                         Icons.backspace, // รูปไอคอน
                         size: 20.0, // ขนาดไอคอน
-                        color: Colors.blueGrey, // สีไอคอน
+                        color: Colors.red, // สีไอคอน
                       )),
                 ],
               ),
               Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: TextButton(
                     child: Text("ลืมรหัสผ่าน",
                         style:
-                            TextStyle(fontSize: 14.0, color: Colors.blueGrey)),
+                            TextStyle(fontSize: 20.0, color: Colors.blueGrey)),
                     onPressed: () {},
                   )),
             ],
@@ -130,14 +130,14 @@ class HomePage extends StatelessWidget {
         width: 60.0,
         height: 60.0,
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: Colors.black,
             shape: BoxShape.circle,
             border: Border.all(color: Colors.black12, width: 1.0),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2), // สีเงา
                 offset: Offset(4, 4), // ทิศทางของเงาในแนวนอนและแนวตั้ง ตามลำดับ
-                blurRadius: 4.0,
+                blurRadius: 2.0,
                 spreadRadius: 2.0,
               )
             ]),
